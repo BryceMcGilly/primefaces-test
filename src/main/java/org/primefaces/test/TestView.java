@@ -34,4 +34,15 @@ public class TestView implements Serializable {
         ));
     }
 
+	public LocalDateTime getLocalDateTime() {
+		return localDateTime;
+	}
+
+	public void setLocalDateTime(LocalDateTime localDateTime) {
+		this.localDateTime = localDateTime;
+	}
+
+	public LocalDateTime getMinDateTime() {
+		return LocalDateTime.now().plusWeeks(2);
+	}
 }

@@ -12,9 +12,12 @@
     </h:head>
     <h:body>
 
-        <h1>#{testView.string}</h1>
+        <h1>PrimeFaces discussion 3494 datePicker mindate issue reproducer</h1>
         <h:form id="frmTest">
-
+        	<p:outputLabel value="Increment the hour by one, notice the date is set to current and not 2 weeks ahead from mindate: " />
+			<p:datePicker value="#{testView.localDateTime}" mindate="#{testView.minDateTime}" 
+						  pattern="MM/dd/yyyy hh:mm a" required="true" hourFormat="12" showTime="true" 
+						  autocomplete="off" showOtherMonths="true" selectOtherMonths="true" />
         </h:form>
 
     </h:body>
